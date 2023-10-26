@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perjumlahan Bilangan</title>
+  </head>
+  
+  <style>
+    .login {
+      padding: 1em;
+      margin: 2em auto;
+      width: 40em;
+      background: white;
+      border-radius: 3px;
+    }
+
+    label {
+      font-size: 10pt;
+      color: black;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 10px;
+      width: 95%;
+      background: #efefef;
+      border: 0;
+      font-size: 10pt;
+      margin: 6px 0px;
+    }
+
+    .tombol {
+      background: #3498db;
+      color: #fff;
+      border: 0;
+      padding: 5px 8px;
+    }
+  </style>
+  <body>
+    <div class="login">
+      <form name="calculator" id="calculator">
+        <h2>PENJUMLAHAN BILANGAN</h2>
+        <div>
+          <label>Bilangan Pertama</label>
+          <input type="text" name="bilangan1" id="bilangan1" />
+          <label>Bilangan Kedua</label>
+          <input type="text" name="bilangan2" id="bilangan2" />
+        </div>
+        <div class="btn-container">
+          <button value="jumlahkan" onclick="hitung()">jumlahkan</button>
+          <button value="ulang" onclick="ulang()">Ulang</button>
+        </div>
+      </form>
+    </div>
+    <script>
+      function hitung() {
+        var bilangan1 = parseFloat(document.getElementById("bilangan1").value);
+        var bilangan2 = parseFloat(document.getElementById("bilangan2").value);
+
+        var hasil = bilangan1 + bilangan2;
+        alert("Hasil penjumlahan: " + hasil)
+      }
+
+      function clear(){
+        document.getElementById("calculator").reset()
+      }
+    </script>
+  </body>
+</html>

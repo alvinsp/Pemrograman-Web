@@ -1,0 +1,9 @@
+table {
+  background-color: #ffd700;
+  color: black;
+}
+
+th,
+td {
+  padding: 5px;
+}
